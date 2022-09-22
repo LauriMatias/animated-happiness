@@ -4,13 +4,12 @@
 
 
 // This function counts how many times a letter is used in a string. It's given the string and the letter to look for as arguments and it returns a number.
-// The calculation is done with .match() method which returns an array of all the occurrences and the function uses the length of this array and adds 1.
+// The calculation is done with .match() method which returns an array of all the occurrences and the function uses the length of this array.
 // Bit crude, I admit, but it works :)
 function timesUsed(str, letter) {
-    const found = str.match(letter); // Node match() tekee jotain muuta???
-    const timesFound = found.length + 1;
-    console.log(found); //debug
-    return timesFound;
+    const re = new RegExp(letter, 'g');
+    const found = str.match(re);
+    return found.length;
 };
 
 // The function isMostFrequent finds out which entry in a map has the largest value to it. The map is given to it as an argument and it returns an array with the most frequent
@@ -38,9 +37,6 @@ function maxCharacter(str) {
             mapOfCharacters.set(str[i], number);
         };
     };
-    for (let y of mapOfCharacters.entries()) {
-        console.log(y);
-    };
     return isMostFrequent(mapOfCharacters);
 };
 
@@ -48,4 +44,4 @@ function maxCharacter(str) {
 // then used when calling function maxCharacter and the result is used in the console log.
 const sentence = process.argv[2].toLowerCase();
 const mostFrequent = maxCharacter(sentence);
-// console.log(`The most common letter in that sentence was ${mostFrequent[0]}, it occurred ${mostFrequent[1]} times.`);
+console.log(`The most common letter in that sentence was ${mostFrequent[0]}, it occurred ${mostFrequent[1]} times.`);
