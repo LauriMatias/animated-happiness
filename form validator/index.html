@@ -8,35 +8,37 @@
         <title>Form Validator</title>
     </head>
     <body>
-        <header id="main-header">
-            <h1>Form Validator</h1>
-        </header>
-        <p>
-            This is a simple test page for validating form inputs. Please fill in your name, email address and the password you want to have.
-            The password must be at least 8 characters long, include at least one number and one special character.
-        </p>
-        <div class="container">
-            <form id="form" class="form"> <!-- should also include things like action="something.php" and method=POST-->
-                <header>
-                    <h2>Form</h2>
-                </header>
+        <div class="box1">
+            <header id="main-header">
+                <h1>Form Validator</h1>
+            </header>
+            <p>
+                This is a simple test page for validating form inputs. Please fill in your name, email address and the password you want to have.
+                The password must be at least 8 characters long, include at least one number and one special character.
+            </p>
+            <div class="container">
+                <form id="form" class="form"> <!-- should also include things like action="something.php" and method=POST-->
+                    <header>
+                        <h2>Form</h2>
+                    </header>
 
-                <label>First name</label>
-                <input type="text" name="firstName" placeholder="First name">
+                    <label>First name</label>
+                    <input type="text" name="firstName" placeholder="First name">
 
-                <label>Last name</label>
-                <input type="text" name="lastName" placeholder="Last name">
+                    <label>Last name</label>
+                    <input type="text" name="lastName" placeholder="Last name">
 
-                <label>Email address</label>
-                <input type="email" name="email" placeholder="Email">
+                    <label>Email address</label>
+                    <input type="email" name="email" placeholder="Email">
 
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Password">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Password">
 
-                <label>Re-enter password</label>
-                <input type="password" name="password2" placeholder="Re-enter password">
+                    <label>Re-enter password</label>
+                    <input type="password" name="password2" placeholder="Re-enter password">
 
-            </form>
+                </form>
+            </div>
         </div>
     </body>
 </html>
