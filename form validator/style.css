@@ -6,8 +6,60 @@ body{
     font-weight: normal;
 }
 
-.box1{
-    background-color: greenyellow;
-    margin: auto;
-    width: 80%;
+.img{
+    width: 25px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 320px;
 }
+
+.img:hover{
+    /* tähän loota joka näytetään pw:n vieressä */
+}
+
+.box1{
+    background-color: darkslateblue;
+    color: antiquewhite;
+
+    margin: auto;
+    margin-top: 50px;
+    width: 60%;
+    padding: 5px 20px;
+    /* border: 2px dotted #ccc; */
+    box-shadow: 6px 7px rgba(0, 0, 0, 0.35);
+}
+
+.button{
+    background-color: indigo;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 15px;
+}
+
+.button:hover{
+    background-color: red;
+}
+
+#main-header{
+    text-decoration: underline;
+}
+
+.my-form{
+    padding: 20px;
+}
+
+.my-form .form-item{
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.my-form label{
+    display: block;
+}
+
+.my-form .field{
+    padding: 4px;
+    width: 300px;
+}
+
