@@ -9,13 +9,38 @@ body{
 .img{
     width: 25px;
     height: auto;
-    position: absolute;
-    top: 20px;
-    left: 320px;
 }
 
-.img:hover{
-    /* tähän loota joka näytetään pw:n vieressä */
+.tooltip {
+    position: absolute;
+    display: inline-block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    height: auto;
+    background-color: slateblue;
+    color: antiquewhite;
+    text-align: left;
+    padding: 0px 20px;
+    border: 30px;
+    border-radius: 5px;
+    border-color: white;
+
+    position: absolute;
+    z-index: 1;
+    bottom: -60px;
+    left: 100%;
+    margin-bottom: 50%;
+
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 .box1{

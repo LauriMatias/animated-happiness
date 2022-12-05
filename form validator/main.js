@@ -9,7 +9,11 @@ function valForm() {
 };
 
 function valUserName() {
-
+    if(userName == "") {
+        userName.style.background = "red";
+        alert("name");
+        return false;
+    };
 };
 
 function valEmail() {
@@ -23,3 +27,5 @@ function valPw() {
 function valRePw() {
 
 };
+
+// form.addEventListener('submit', valUserName);

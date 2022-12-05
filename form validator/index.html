@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>Form Validator</title>
-        <script type="text/javascript" href="main.js" defer></script>
     </head>
     <body>
         <div class="box1">
@@ -18,7 +17,7 @@
                 The password must be at least 8 characters long, include at least one number and one special character.
             </p>
             <div class="container">
-                <form id="form" class="my-form" method="post">
+                <form id="form" class="my-form" method="post" onsubmit="return valUserName()">
                     <header>
                         <h2>Form</h2>
                     </header>
@@ -35,7 +34,17 @@
                     <div class="form-item">
                         <label>Password</label>
                         <input type="password" id="pw" class="field" name="password" placeholder="Password">
-                        <img class="img" src="img/info.png" alt="More info">
+                        <div class="tooltip">
+                            <img class="img" id="info" src="img/info.png" alt="More info">
+                            <span class="tooltiptext">
+                                <h4>Password must include:</h4>
+                                <ul>
+                                    <li>8 characters</li>
+                                    <li>One number</li>
+                                    <li>One special character</li>
+                                </ul>
+                            </span>
+                        </div>
                     </div>
 
                     <div class="form-item">
@@ -47,5 +56,6 @@
                 </form>
             </div>
         </div>
+        <script type="text/javascript" src="main.js" defer></script>
     </body>
 </html>
